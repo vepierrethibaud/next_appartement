@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -842,8 +842,8 @@ __webpack_require__.r(__webpack_exports__);
  // import fetch from 'isomorphic-unfetch';
 
 var Post = function Post(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, props.show.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.show.summary.replace(/<[/]?p>/g, '')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: props.show.image.medium
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, props.data.title.rendered), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.data.acf.details_full), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.data.acf.price, "\u20AC/nuit"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Rating : ", props.data.acf.rating), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+    src: props.data.acf.image
   }));
 };
 
@@ -853,14 +853,14 @@ function () {
   var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context) {
-    var id, res, show;
+    var id, res, data;
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             id = context.query.id;
             _context.next = 3;
-            return fetch("https://api.tvmaze.com/shows/".concat(id));
+            return fetch("http://apirl.xyz/wp-json/wp/v2/appartments/".concat(id, "?_fields=id,title,slug,acf"));
 
           case 3:
             res = _context.sent;
@@ -868,10 +868,10 @@ function () {
             return res.json();
 
           case 6:
-            show = _context.sent;
-            console.log("Fetched show: ".concat(show.name));
+            data = _context.sent;
+            console.log("Fetched show: ".concat(data.title.rendered));
             return _context.abrupt("return", {
-              show: show
+              data: data
             });
 
           case 9:
@@ -891,7 +891,7 @@ function () {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!*****************************!*\
   !*** multi ./pages/post.js ***!
   \*****************************/
