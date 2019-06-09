@@ -20,8 +20,6 @@ const Appartement = ({appartement: {id, slug, title, acf}, favorites, toggleFav}
       </button>
     </div>
   </article>
-
-
 )
 
 export default Appartement;
