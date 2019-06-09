@@ -1,18 +1,21 @@
 import Link from 'next/link';
-
-const linkStyle = {
-  marginRight: 15
-};
+import "../css/style.css"
 
 const Header = () => (
-  <div>
+  <nav>
     <Link href="/">
-      <a style={linkStyle}>Home</a>
+      <a className="logo">Loca'<span>part</span></a>
     </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-  </div>
+    
+    <div>
+      <Link href="/">
+        <a className="nav-margin">Home</a>
+      </Link>
+      <Link href="/about">
+        <a className="nav-margin">About</a>
+      </Link>
+    </div>
+  </nav>
 );
 
 export default Header;

@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+}
+
+.nav-margin{
+    margin-left: 30px;
+    color: black;
+}
+
+.nav-margin:hover{
+    text-decoration: underline;
+}
+
+span{
+    color: orange;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+section{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px auto 0;
+}
+
+article{
+    box-sizing: border-box;
+    width: 49%;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    display: flex;
+    height: 200px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.titre{
+    color: black;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.title_appart{
+    color: black;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.desc{
+    padding: 25px;
+}
+
+.desc_appart{
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto 50px;
+}
+
+.rating{
+    font-size: 15px;
+}
+
+.rating_title{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.price{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.price_title{
+    margin-top: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.line{
+    margin-top: 15px;
+    width: 150px;
+    background: black;
+    height: 1px;
+}
+
+.img_grid{
+    width: 200px;
+    height: 100%;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.img_appart{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    padding: 60px 0 10px 0px;
+}
+
+footer{
+    height: 200px;
+    width: 100%;
+    border-top: 1px solid rgb(216, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 15px;
+    padding: 15px 0;
+    margin: 10px auto 0 auto; 
+    width: 50%;
+}
+
+.searchBar{
+    text-align: center;
+}
+
+.found{
+    margin-top: 10px;
+}
+
+.showAll{
+    padding: 15px;
+    border: none;
+    border: 2px solid black;
+    outline: none;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.loading{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 30px;
+}
+
+.favButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    padding: 10px;
+    background: rgb(255, 164, 164);
+    color: white;
+    outline: none;
+    border-bottom-right-radius: 9px;
+}
+.p1{
+    margin: 20px 0;
+}
+
+b{
+    font-size: 25px;
+}
+
+/*# sourceMappingURL=styles.chunk.css.map*/

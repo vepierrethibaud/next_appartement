@@ -1,15 +1,18 @@
 import Layout from '../components/MyLayout.js';
-// import fetch from 'isomorphic-unfetch';
+import fetch from 'isomorphic-unfetch';
+import "../css/style.css";
 
 const Post = props => (
+    
   <Layout>
-
-    <h1>{props.data.title.rendered}</h1>
-    <p>{props.data.acf.details_full}</p>
-    <p>{props.data.acf.price}€/nuit</p>
-    <p>Rating : {props.data.acf.rating}</p>
-    <img src={props.data.acf.image} />
-
+    <div className="title_appart">
+        <img className="img_appart" src={props.data.acf.image} />
+        <h1>{props.data.title.rendered}</h1>
+        <p className="rating_title">{new Array(parseInt(props.data.acf.rating)).fill('⭐️️️️️')}</p>
+        <p className="price_title">${props.data.acf.price} per night</p>
+    </div>
+    
+    <p className="desc_appart" dangerouslySetInnerHTML={{__html: props.data.acf.details_full}}></p>
   </Layout>
 );
 
